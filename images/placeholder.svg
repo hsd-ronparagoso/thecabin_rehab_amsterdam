@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title">
+  <title id="title">Placeholder</title>
+  <rect width="800" height="500" fill="#dfe7e4"/>
+  <path d="M0 390 210 220l130 100 130-150 330 220v110H0Z" fill="#9fb5ad"/>
+  <text x="400" y="265" text-anchor="middle" font-family="sans-serif" font-size="32" fill="#204053">[Placeholder afbeelding]</text>
+</svg>
