@@ -33,6 +33,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- Lead modal (popup) ---------- */
+  const modalOverlay = document.getElementById('leadModalOverlay');
+  const modalClose = document.getElementById('leadModalClose');
+  let lastFocused = null;
+
+  function openLeadModal() {
+    if (!modalOverlay) return;
+    lastFocused = document.activeElement;
+    modalOverlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    const firstField = modalOverlay.querySelector('input');
+    if (firstField) firstField.focus();
+  }
+
+  function closeLeadModal() {
+    if (!modalOverlay) return;
+    modalOverlay.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.querySelectorAll('[data-open-modal]').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLeadModal();
+    });
+  });
+
+  if (modalClose) modalClose.addEventListener('click', closeLeadModal);
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeLeadModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay && !modalOverlay.hidden) closeLeadModal();
+  });
+
+  const popupLeadForm = document.getElementById('popupLeadForm');
+  if (popupLeadForm) {
+    popupLeadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = popupLeadForm.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.textContent = 'Aanvraag verzonden';
+        btn.disabled = true;
+      }
+      setTimeout(closeLeadModal, 1200);
+    });
+  }
+
   /* ---------- Accordion (practical info) — smooth, height-aware ---------- */
   document.querySelectorAll('.accordion-item').forEach(item => {
     const trigger = item.querySelector('.accordion-trigger');
@@ -107,16 +158,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Rehab carousel ---------- */
-  const track = document.getElementById('carouselTrack');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const dotsContainer = document.getElementById('paginationDots');
+  /* ---------- Generic carousel (drag + arrows + dots) ---------- */
+  function initCarousel({ trackId, prevBtnId, nextBtnId, dotsId, ariaLabel, padToMin }) {
+    const track = document.getElementById(trackId);
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+    const dotsContainer = document.getElementById(dotsId);
+    if (!track) return;
 
-  if (track) {
-    const placeholderCards = Array.from(track.children);
-    while (track.children.length < 6 && placeholderCards.length) {
-      track.appendChild(placeholderCards[(track.children.length - placeholderCards.length) % placeholderCards.length].cloneNode(true));
+    if (padToMin) {
+      const placeholderCards = Array.from(track.children);
+      while (track.children.length < padToMin && placeholderCards.length) {
+        track.appendChild(placeholderCards[(track.children.length - placeholderCards.length) % placeholderCards.length].cloneNode(true));
+      }
     }
 
     const cards = Array.from(track.children);
@@ -133,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     track.setAttribute('tabindex', '0');
     track.setAttribute('role', 'region');
-    track.setAttribute('aria-label', 'Revalidatiecentra carousel');
+    if (ariaLabel) track.setAttribute('aria-label', ariaLabel);
 
     function getCardsPerView() {
       const width = window.innerWidth;
@@ -143,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderDots() {
+      if (!dotsContainer) return;
       dotsContainer.innerHTML = '';
       const totalPages = maxIndex + 1;
       for (let i = 0; i < totalPages; i++) {
@@ -178,8 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateUI() {
       if (prevBtn) prevBtn.disabled = currentIndex === 0;
       if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
-      const dots = Array.from(dotsContainer.children);
-      dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentIndex));
+      if (dotsContainer) {
+        const dots = Array.from(dotsContainer.children);
+        dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentIndex));
+      }
     }
 
     if (prevBtn) prevBtn.addEventListener('click', () => { if (currentIndex > 0) goToSlide(currentIndex - 1); });
@@ -253,6 +310,72 @@ document.addEventListener('DOMContentLoaded', () => {
     goToSlide(0);
   }
 
+  initCarousel({
+    trackId: 'carouselTrack', prevBtnId: 'prevBtn', nextBtnId: 'nextBtn', dotsId: 'paginationDots',
+    ariaLabel: 'Revalidatiecentra carousel', padToMin: 6
+  });
+
+  /* ---------- Process stepper (Het proces) ---------- */
+  const processTrack = document.getElementById('processTrack');
+  const processPanel = document.getElementById('processPanel');
+  const processProgressFill = document.getElementById('processProgressFill');
+  if (processTrack && processPanel) {
+    const steps = Array.from(processTrack.querySelectorAll('.process-step'));
+    const panelNum = document.getElementById('processPanelNum');
+    const panelTitle = document.getElementById('processPanelTitle');
+    const panelDesc = document.getElementById('processPanelDesc');
+
+    function selectStep(index, { instant } = {}) {
+      const step = steps[index];
+      if (!step) return;
+
+      steps.forEach((s, i) => {
+        const isActive = i === index;
+        s.classList.toggle('active', isActive);
+        s.setAttribute('aria-selected', String(isActive));
+        if (isActive) s.setAttribute('aria-current', 'true');
+        else s.removeAttribute('aria-current');
+      });
+
+      if (processProgressFill) {
+        const pct = steps.length > 1 ? (index / (steps.length - 1)) * 100 : 100;
+        processProgressFill.style.width = pct + '%';
+      }
+
+      const applyContent = () => {
+        panelNum.textContent = String(index + 1).padStart(2, '0');
+        panelTitle.textContent = step.dataset.title;
+        panelDesc.textContent = step.dataset.desc;
+      };
+
+      if (instant || prefersReduced) {
+        applyContent();
+      } else {
+        processPanel.classList.add('transitioning');
+        setTimeout(() => {
+          applyContent();
+          processPanel.classList.remove('transitioning');
+        }, 180);
+      }
+
+      step.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+    }
+
+    steps.forEach((step, index) => {
+      step.addEventListener('click', () => {
+        if (!step.classList.contains('active')) selectStep(index);
+      });
+    });
+
+    processTrack.addEventListener('keydown', (e) => {
+      const currentIndex = steps.findIndex(s => s.classList.contains('active'));
+      if (e.key === 'ArrowRight' && currentIndex < steps.length - 1) { e.preventDefault(); selectStep(currentIndex + 1); }
+      if (e.key === 'ArrowLeft' && currentIndex > 0) { e.preventDefault(); selectStep(currentIndex - 1); }
+    });
+
+    selectStep(0, { instant: true });
+  }
+
   /* ---------- Active nav state (scroll-spy) ---------- */
   if (navLinks) {
     const spyLinks = Array.from(navLinks.querySelectorAll('.nav-link[href^="#"]'));
@@ -274,8 +397,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Scroll reveal (fade + rise groups; see CSS "Scroll-reveal system") ---------- */
   const revealSelectors = [
-    '.editorial-inner', '.trust-band-inner', '.answer-block-inner', '.detail-inner', '.cta-band-inner',
-    '.card-grid', '.timeline-list', '.checklist-grid', '.accordion-inner', '.cost-grid',
+    '.editorial-inner', '.trust-band-inner', '.answer-block-inner', '.detail-inner', '.cta-band-inner', '.timeline-inner',
+    '.card-grid', '.checklist-grid', '.accordion-inner', '.cost-grid',
     '.rehab-carousel-section'
   ];
   const revealEls = document.querySelectorAll(revealSelectors.join(','));
