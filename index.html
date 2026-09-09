@@ -49,16 +49,127 @@
   <div class="hero-content">
     <span class="hero-eyebrow">Vertrouwelijk &amp; evidence-based</span>
     <h1 class="hero-title">Amsterdam Revalidatie Behandelcentrum</h1>
+
+    <div class="hero-stats" role="list" aria-label="Kerncijfers">
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-num">15+</span>
+        <span class="hero-stat-label">Jaar ervaring</span>
+      </div>
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-num">500+</span>
+        <span class="hero-stat-label">Succesvolle behandelingen</span>
+      </div>
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-num">10</span>
+        <span class="hero-stat-label">Behandelprogramma's</span>
+      </div>
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-num">98%</span>
+        <span class="hero-stat-label">Patiënttevredenheid</span>
+      </div>
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-num">24/7</span>
+        <span class="hero-stat-label">Deskundig personeel</span>
+      </div>
+    </div>
+
     <div class="hero-desc-wrap">
       <p class="hero-description collapsed" id="heroDesc">Amsterdam Revalidatie Behandelcentrum is een populaire bestemming voor patiënten die hulp zoeken bij verslaving vanwege het aanbod van gespecialiseerde programma's. Het revalidatiecentrum in Amsterdam biedt revalidatiecentra die verslavingen behandelen zoals alcohol, opioïden en gokken. De revalidatiecentra bieden ontgifting, therapie en gepersonaliseerde zorg om fysieke en psychologische behoeften aan te pakken. Luxe en betaalbare revalidatieopties zijn beschikbaar, wat toegankelijkheid voor verschillende budgetten garandeert. Praktische factoren, zoals locatie en voorzieningen, zijn essentieel bij het kiezen van het juiste revalidatiecentrum. De combinatie van hoogwaardige zorg en de unieke locatie van Amsterdam maakt het een aantrekkelijke optie voor herstelpatiënten.</p>
+      <button class="hero-show-more" id="heroShowMore" aria-expanded="false" aria-controls="heroDesc">
+        Toon meer
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
     </div>
-    <button class="hero-show-more" id="heroShowMore" aria-expanded="false" aria-controls="heroDesc">
-      Toon meer
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-    </button>
-    <div class="hero-cta-group">
-      <a href="#aanmelden" class="btn btn-primary btn-lg" data-open-modal="leadModal">Neem vertrouwelijk contact op</a>
-      <a href="#waarom-amsterdam" class="btn btn-outline btn-lg">Ontdek het aanbod</a>
+
+    <form class="hero-lead-form" id="heroLeadForm">
+      <div class="hero-lead-field">
+        <label for="hero-lf-name" class="sr-only">Naam</label>
+        <input type="text" id="hero-lf-name" name="name" placeholder="Naam" autocomplete="name" required>
+      </div>
+      <div class="hero-lead-field">
+        <label for="hero-lf-phone" class="sr-only">Telefoonnummer</label>
+        <input type="tel" id="hero-lf-phone" name="phone" placeholder="Telefoonnummer" autocomplete="tel" required>
+      </div>
+      <button type="submit" class="btn btn-primary hero-lead-submit">Aanvragen</button>
+    </form>
+
+    <div class="hero-direct-cta">
+      <a href="mailto:info@thecabinnetherlands.com" class="hero-direct-link">
+        <span class="cta-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><path d="m4 6 8 7 8-7"></path></svg>
+        </span>
+        Contact via e-mail
+      </a>
+      <a href="tel:+6620385469" class="hero-direct-link hero-direct-link-call">
+        <span class="cta-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </span>
+        <span class="cta-label-group">
+          <span class="cta-eyebrow">Direct bereikbaar</span>
+          Bel ons
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: BEHANDELMETHODOLOGIEËN ============ -->
+<section class="methodologies-section" id="methodologieen">
+  <div class="methodologies-inner">
+    <div class="methodologies-head">
+      <span class="tag">Onze aanpak</span>
+      <h2 class="section-heading">Behandelmethodologieën die wij toepassen</h2>
+      <p>Elk hersteltraject combineert evidence-based therapieën met persoonlijke aandacht. Dit zijn de kernmethodieken achter onze programma's.</p>
+    </div>
+    <div class="methodologies-grid">
+      <div class="methodology-card">
+        <span class="methodology-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l3 2"></path></svg>
+        </span>
+        <div class="methodology-body">
+          <h3>Cognitieve gedragstherapie</h3>
+          <p>Eén-op-één sessies die schadelijke denkpatronen herkennen en ombuigen naar gezonde copingvaardigheden.</p>
+        </div>
+        <a href="#behandelmethoden" class="methodology-link">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="methodology-card">
+        <span class="methodology-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"></circle><circle cx="17" cy="7" r="3"></circle><path d="M2 20c0-3 3-5 7-5s7 2 7 5"></path><path d="M15 15c3.3 0 6 2 6 5"></path></svg>
+        </span>
+        <div class="methodology-body">
+          <h3>Groeps- &amp; gezinstherapie</h3>
+          <p>Steun van lotgenoten en herstel van familieband via begeleide groeps- en gezinssessies.</p>
+        </div>
+        <a href="#behandelmethoden" class="methodology-link">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="methodology-card">
+        <span class="methodology-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-9C.5 8 2 4 6 4c2 0 3.5 1 4 2.5.5-1.5 2-2.5 4-2.5 4 0 5.5 4 3.5 8-2.5 4.65-9.5 9-9.5 9Z"></path></svg>
+        </span>
+        <div class="methodology-body">
+          <h3>Holistische therapieën</h3>
+          <p>Yoga, meditatie en creatieve therapie ter ondersteuning van emotioneel en fysiek welzijn.</p>
+        </div>
+        <a href="#behandelmethoden" class="methodology-link">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="methodology-card">
+        <span class="methodology-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+        </span>
+        <div class="methodology-body">
+          <h3>Nazorg &amp; terugvalpreventie</h3>
+          <p>Alumniprogramma's, vervolggesprekken en strategieën die herstel op lange termijn borgen.</p>
+        </div>
+        <a href="#praktisch" class="methodology-link">Meer info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -71,12 +182,25 @@
       <h2>Behandelcentrum voor Drugs- en Alcoholverslaving</h2>
       <p>Neem discreet contact op om te bespreken welk programma past bij uw situatie, budget en behoeften — zonder verplichtingen.</p>
       <ul class="trust-band-points">
-        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Strikte vertrouwelijkheid en naleving van de AVG</li>
-        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Internationaal deskundig personeel</li>
-        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Luxe en betaalbare programma's beschikbaar</li>
+        <li>
+          <span class="trust-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7Z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+          <span>Strikte vertrouwelijkheid en naleving van de AVG</span>
+        </li>
+        <li>
+          <span class="trust-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"></path></svg></span>
+          <span>Internationaal deskundig personeel</span>
+        </li>
+        <li>
+          <span class="trust-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.3 6.2 20l1.1-6.5L2.5 9l6.5-.9L12 2.3l3 5.8 6.5.9-4.8 4.5 1.1 6.5z"></path></svg></span>
+          <span>Luxe en betaalbare programma's beschikbaar</span>
+        </li>
       </ul>
     </div>
     <form class="lead-form" id="leadForm">
+      <span class="lead-form-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+        100% vertrouwelijk
+      </span>
       <h3>Vraag een vertrouwelijk gesprek aan</h3>
       <p class="form-sub">Wij nemen doorgaans dezelfde dag nog contact met u op.</p>
       <div class="field">
@@ -115,7 +239,7 @@
 </section>
 
 <!-- ============ HET PROCES: interactieve stepper ============ -->
-<section class="timeline-section">
+<section class="timeline-section" id="proces">
   <div class="timeline-inner">
     <div class="timeline-head">
       <span class="tag">Het proces</span>
@@ -125,16 +249,16 @@
 
     <div class="process-stepper">
       <div class="process-track" id="processTrack" role="tablist" aria-label="Revalidatieproces stappen">
-        <button type="button" class="process-step active" role="tab" aria-selected="true" aria-current="true" data-step="0" data-title="Beoordeel de patiënt" data-desc="Begin met een evaluatie van de medische geschiedenis van de patiënt, de ernst van de verslaving en eventuele bijkomende psychische aandoeningen. Dit helpt bij het opstellen van een behandelplan." aria-label="Stap 1: Beoordeel de patiënt"><span class="process-step-num">01</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="1" data-title="Ontgift het lichaam" data-desc="Bied een medisch begeleide ontgifting aan om ontwenningsverschijnselen te beheersen. Dit proces waarborgt veiligheid en comfort terwijl het lichaam zich ontdoet van stoffen." aria-label="Stap 2: Ontgift het lichaam"><span class="process-step-num">02</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="2" data-title="Bied individuele therapie aan" data-desc="Voer één-op-één therapiesessies uit om persoonlijke kwesties te onderzoeken die bijdragen aan de verslaving. Gebruik cognitieve gedragstherapie (CGT) om schadelijke gedachten en gedragingen aan te pakken." aria-label="Stap 3: Bied individuele therapie aan"><span class="process-step-num">03</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="3" data-title="Faciliteer groepstherapie" data-desc="Organiseer groepstherapiesessies waarin patiënten ervaringen delen, elkaar steunen en leren van mensen in vergelijkbare situaties. Dit bevordert een gevoel van gemeenschap en begrip." aria-label="Stap 4: Faciliteer groepstherapie"><span class="process-step-num">04</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="4" data-title="Introduceer holistische therapieën" data-desc="Integreer yoga, meditatie en kunst om het emotionele, fysieke en spirituele welzijn te ondersteunen. Deze behandelingen helpen om het herstel in balans te brengen." aria-label="Stap 5: Introduceer holistische therapieën"><span class="process-step-num">05</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="5" data-title="Bied educatieve workshops aan" data-desc="Organiseer workshops om patiënten voor te lichten over verslaving, herstelstrategieën en copingmechanismen. De sessies zijn bedoeld om deelnemers te versterken voor langdurig succes." aria-label="Stap 6: Bied educatieve workshops aan"><span class="process-step-num">06</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="6" data-title="Betrek familieleden" data-desc="Neem familieleden op in het revalidatieproces via gezinstherapie. Dit helpt relaties te herstellen en zorgt voor een ondersteunende thuissituatie." aria-label="Stap 7: Betrek familieleden"><span class="process-step-num">07</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="7" data-title="Stel een nazorgplan op" data-desc="Ontwikkel een gedetailleerd nazorgplan om het herstel te ondersteunen. Dit omvat poliklinische diensten, steungroepen en voortdurende counseling om de vooruitgang te behouden." aria-label="Stap 8: Stel een nazorgplan op"><span class="process-step-num">08</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="8" data-title="Leer terugvalpreventie" data-desc="Voorzie patiënten van hulpmiddelen en strategieën om triggers te herkennen en hunkeringen te beheersen. De training helpt terugval te voorkomen door gezonde copingvaardigheden aan te leren." aria-label="Stap 9: Leer terugvalpreventie"><span class="process-step-num">09</span></button>
-        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="9" data-title="Bied voortdurende ondersteuning" data-desc="Lever blijvende ondersteuning via alumnidiensten en nazorg. Dit zorgt ervoor dat patiënten verbonden blijven met een herstelgemeenschap en na de behandeling aanmoediging ontvangen." aria-label="Stap 10: Bied voortdurende ondersteuning"><span class="process-step-num">10</span></button>
+        <button type="button" class="process-step active" role="tab" aria-selected="true" aria-current="true" data-step="0" data-title="Beoordeel de patiënt" data-desc="Begin met een evaluatie van de medische geschiedenis van de patiënt, de ernst van de verslaving en eventuele bijkomende psychische aandoeningen. Dit helpt bij het opstellen van een behandelplan." aria-label="Stap 1: Beoordeel de patiënt"><span class="process-step-num">01</span><span class="process-step-label">Beoordeel de patiënt</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="1" data-title="Ontgift het lichaam" data-desc="Bied een medisch begeleide ontgifting aan om ontwenningsverschijnselen te beheersen. Dit proces waarborgt veiligheid en comfort terwijl het lichaam zich ontdoet van stoffen." aria-label="Stap 2: Ontgift het lichaam"><span class="process-step-num">02</span><span class="process-step-label">Ontgift het lichaam</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="2" data-title="Bied individuele therapie aan" data-desc="Voer één-op-één therapiesessies uit om persoonlijke kwesties te onderzoeken die bijdragen aan de verslaving. Gebruik cognitieve gedragstherapie (CGT) om schadelijke gedachten en gedragingen aan te pakken." aria-label="Stap 3: Bied individuele therapie aan"><span class="process-step-num">03</span><span class="process-step-label">Individuele therapie</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="3" data-title="Faciliteer groepstherapie" data-desc="Organiseer groepstherapiesessies waarin patiënten ervaringen delen, elkaar steunen en leren van mensen in vergelijkbare situaties. Dit bevordert een gevoel van gemeenschap en begrip." aria-label="Stap 4: Faciliteer groepstherapie"><span class="process-step-num">04</span><span class="process-step-label">Groepstherapie</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="4" data-title="Introduceer holistische therapieën" data-desc="Integreer yoga, meditatie en kunst om het emotionele, fysieke en spirituele welzijn te ondersteunen. Deze behandelingen helpen om het herstel in balans te brengen." aria-label="Stap 5: Introduceer holistische therapieën"><span class="process-step-num">05</span><span class="process-step-label">Holistische therapie</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="5" data-title="Bied educatieve workshops aan" data-desc="Organiseer workshops om patiënten voor te lichten over verslaving, herstelstrategieën en copingmechanismen. De sessies zijn bedoeld om deelnemers te versterken voor langdurig succes." aria-label="Stap 6: Bied educatieve workshops aan"><span class="process-step-num">06</span><span class="process-step-label">Educatieve workshops</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="6" data-title="Betrek familieleden" data-desc="Neem familieleden op in het revalidatieproces via gezinstherapie. Dit helpt relaties te herstellen en zorgt voor een ondersteunende thuissituatie." aria-label="Stap 7: Betrek familieleden"><span class="process-step-num">07</span><span class="process-step-label">Familie betrekken</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="7" data-title="Stel een nazorgplan op" data-desc="Ontwikkel een gedetailleerd nazorgplan om het herstel te ondersteunen. Dit omvat poliklinische diensten, steungroepen en voortdurende counseling om de vooruitgang te behouden." aria-label="Stap 8: Stel een nazorgplan op"><span class="process-step-num">08</span><span class="process-step-label">Nazorgplan</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="8" data-title="Leer terugvalpreventie" data-desc="Voorzie patiënten van hulpmiddelen en strategieën om triggers te herkennen en hunkeringen te beheersen. De training helpt terugval te voorkomen door gezonde copingvaardigheden aan te leren." aria-label="Stap 9: Leer terugvalpreventie"><span class="process-step-num">09</span><span class="process-step-label">Terugvalpreventie</span></button>
+        <button type="button" class="process-step" role="tab" aria-selected="false" data-step="9" data-title="Bied voortdurende ondersteuning" data-desc="Lever blijvende ondersteuning via alumnidiensten en nazorg. Dit zorgt ervoor dat patiënten verbonden blijven met een herstelgemeenschap en na de behandeling aanmoediging ontvangen." aria-label="Stap 10: Bied voortdurende ondersteuning"><span class="process-step-num">10</span><span class="process-step-label">Blijvende ondersteuning</span></button>
       </div>
       <div class="process-progress"><div class="process-progress-fill" id="processProgressFill" style="width:10%"></div></div>
     </div>
@@ -142,6 +266,7 @@
     <div class="process-panel" id="processPanel" role="tabpanel">
       <span class="process-panel-num" id="processPanelNum">01</span>
       <div class="process-panel-text">
+        <span class="process-panel-eyebrow" id="processPanelEyebrow">Stap 01 van 10</span>
         <h4 id="processPanelTitle">Beoordeel de patiënt</h4>
         <p id="processPanelDesc">Begin met een evaluatie van de medische geschiedenis van de patiënt, de ernst van de verslaving en eventuele bijkomende psychische aandoeningen. Dit helpt bij het opstellen van een behandelplan.</p>
       </div>
@@ -181,7 +306,7 @@
 </section>
 
 <!-- ============ H3: AMSTERDAM VS DENEMARKEN ============ -->
-<section class="answer-block alt">
+<section class="answer-block alt" id="ervaringen">
   <div class="answer-block-inner">
     <div class="answer-card">
       <div class="answer-main">
@@ -203,248 +328,6 @@
         <p class="aside-note">lagere prijzen dan vergelijkbare Deense revalidatiecentra, met behoud van kwaliteitsnormen.</p>
       </aside>
     </div>
-  </div>
-</section>
-
-<!-- ============ REHAB CAROUSEL (placeholder items — no content from brief/document applies here; to be replaced with real partner data) ============ -->
-<section class="rehab-carousel-section" aria-labelledby="carousel-heading">
-  <div class="rehab-carousel-inner">
-    <div class="section-header">
-      <div class="header-content">
-        <span class="sub-tag">[Placeholder label]</span>
-        <h2 id="carousel-heading" class="section-title">[Placeholder heading]</h2>
-        <p class="section-description">[Placeholder section description]</p>
-      </div>
-      <div class="nav-buttons">
-        <button id="prevBtn" class="nav-btn" aria-label="Vorig revalidatiecentrum">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-        <button id="nextBtn" class="nav-btn" aria-label="Volgend revalidatiecentrum">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="carousel-wrapper">
-      <div class="carousel-track" id="carouselTrack">
-
-        <!-- Card 1 (placeholder — no real facility data yet) -->
-        <article class="rehab-card">
-          <div class="card-image-box">
-            <div class="main-image-container">
-              <img src="images/placeholder.svg" alt="[Placeholder afbeelding]" class="card-main-img">
-              <span class="tier-pill elite-tier">[Placeholder]</span>
-            </div>
-            <div class="thumbnail-bar">
-              <button class="thumb-btn active" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 1"><img src="images/placeholder.svg" alt=""></button>
-              <button class="thumb-btn" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 2"><img src="images/placeholder.svg" alt=""></button>
-              <button class="thumb-btn" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 3"><img src="images/placeholder.svg" alt=""></button>
-            </div>
-          </div>
-
-          <div class="rehab-main-info">
-            <div class="card-title-header">
-              <div class="logo-badge logo-badge-placeholder">LOGO</div>
-              <h3 class="card-title">[Placeholder naam]</h3>
-            </div>
-            <p class="card-tagline">[Placeholder tagline]</p>
-            <div class="rating-row">
-              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
-                <span class="star-rating-bg">★★★★★</span>
-                <span class="star-rating-fg">★★★★★</span>
-              </span>
-              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
-            </div>
-            <p class="card-desc">[Placeholder description]</p>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">SPECIALISMEN</span>
-            <div class="tags-container">
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-            </div>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">VOORDELEN</span>
-            <ul class="advantages-list">
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-            </ul>
-          </div>
-
-          <div class="edge-notes-box">
-            <div class="notes-header">
-              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
-              <span>[Placeholder label]</span>
-            </div>
-            <p class="notes-text">[Placeholder teamnotitie]</p>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">CLIËNTBEOORDELINGEN</span>
-            <div class="client-review-box">
-              <div class="stars">★★★★★</div>
-              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
-              <span class="review-author">— [Placeholder naam]</span>
-            </div>
-          </div>
-
-          <a href="#aanmelden" class="btn-visit">
-            [Placeholder CTA-tekst]
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </article>
-
-        <!-- Card 2 (placeholder — no real facility data yet) -->
-        <article class="rehab-card">
-          <div class="card-image-box">
-            <div class="main-image-container">
-              <img src="images/placeholder.svg" alt="[Placeholder afbeelding]" class="card-main-img">
-              <span class="tier-pill elite-tier">[Placeholder]</span>
-            </div>
-            <div class="thumbnail-bar">
-              <button class="thumb-btn active" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 1"><img src="images/placeholder.svg" alt=""></button>
-              <button class="thumb-btn" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 2"><img src="images/placeholder.svg" alt=""></button>
-              <button class="thumb-btn" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 3"><img src="images/placeholder.svg" alt=""></button>
-            </div>
-          </div>
-
-          <div class="rehab-main-info">
-            <div class="card-title-header">
-              <div class="logo-badge logo-badge-placeholder">LOGO</div>
-              <h3 class="card-title">[Placeholder naam]</h3>
-            </div>
-            <p class="card-tagline">[Placeholder tagline]</p>
-            <div class="rating-row">
-              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
-                <span class="star-rating-bg">★★★★★</span>
-                <span class="star-rating-fg">★★★★★</span>
-              </span>
-              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
-            </div>
-            <p class="card-desc">[Placeholder description]</p>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">SPECIALISMEN</span>
-            <div class="tags-container">
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-            </div>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">VOORDELEN</span>
-            <ul class="advantages-list">
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-            </ul>
-          </div>
-
-          <div class="edge-notes-box">
-            <div class="notes-header">
-              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
-              <span>[Placeholder label]</span>
-            </div>
-            <p class="notes-text">[Placeholder teamnotitie]</p>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">CLIËNTBEOORDELINGEN</span>
-            <div class="client-review-box">
-              <div class="stars">★★★★★</div>
-              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
-              <span class="review-author">— [Placeholder naam]</span>
-            </div>
-          </div>
-
-          <a href="#aanmelden" class="btn-visit">
-            [Placeholder CTA-tekst]
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </article>
-
-        <!-- Card 3 (placeholder — no real facility data yet) -->
-        <article class="rehab-card">
-          <div class="card-image-box">
-            <div class="main-image-container">
-              <img src="images/placeholder.svg" alt="[Placeholder afbeelding]" class="card-main-img">
-              <span class="tier-pill partner-tier">[Placeholder]</span>
-            </div>
-            <div class="thumbnail-bar">
-              <button class="thumb-btn active" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 1"><img src="images/placeholder.svg" alt=""></button>
-              <button class="thumb-btn" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 2"><img src="images/placeholder.svg" alt=""></button>
-              <button class="thumb-btn" onmouseenter="switchCardImage(this)" onclick="switchCardImage(this)" aria-label="Bekijk placeholder foto 3"><img src="images/placeholder.svg" alt=""></button>
-            </div>
-          </div>
-
-          <div class="rehab-main-info">
-            <div class="card-title-header">
-              <div class="logo-badge logo-badge-placeholder">LOGO</div>
-              <h3 class="card-title">[Placeholder naam]</h3>
-            </div>
-            <p class="card-tagline">[Placeholder tagline]</p>
-            <div class="rating-row">
-              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
-                <span class="star-rating-bg">★★★★★</span>
-                <span class="star-rating-fg">★★★★★</span>
-              </span>
-              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
-            </div>
-            <p class="card-desc">[Placeholder description]</p>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">SPECIALISMEN</span>
-            <div class="tags-container">
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
-            </div>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">VOORDELEN</span>
-            <ul class="advantages-list">
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
-            </ul>
-          </div>
-
-          <div class="edge-notes-box">
-            <div class="notes-header">
-              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
-              <span>[Placeholder label]</span>
-            </div>
-            <p class="notes-text">[Placeholder teamnotitie]</p>
-          </div>
-
-          <div class="card-section">
-            <span class="section-label">CLIËNTBEOORDELINGEN</span>
-            <div class="client-review-box">
-              <div class="stars">★★★★★</div>
-              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
-              <span class="review-author">— [Placeholder naam]</span>
-            </div>
-          </div>
-
-          <a href="#aanmelden" class="btn-visit">
-            [Placeholder CTA-tekst]
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </article>
-
-      </div>
-    </div>
-
-    <div class="pagination-dots" id="paginationDots" aria-label="Carousel paginering"></div>
   </div>
 </section>
 
@@ -694,7 +577,7 @@
 </section>
 
 <!-- ============ BEHANDELMETHODEN ============ -->
-<section class="editorial alt">
+<section class="editorial alt" id="behandelmethoden">
   <div class="editorial-inner">
     <div class="editorial-media">
       <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=75" alt="Therapiesessie in een rustige omgeving">
@@ -765,36 +648,356 @@
   </div>
 </section>
 
-<!-- ============ BESTE LOCATIES ============ -->
-<section class="grid-section" id="locaties-kosten">
-  <div class="grid-inner">
-    <div class="grid-head">
-      <span class="tag">Locaties</span>
-      <h2 class="section-heading">Waar bevinden zich de beste revalidatiecentra in Amsterdam?</h2>
-      <div class="prose"><p>De beste revalidatiecentra in Amsterdam zijn hieronder vermeld.</p></div>
-    </div>
-    <div class="card-grid">
-      <div class="info-card">
-        <h3>Amsterdam Centrum</h3>
-        <p>Amsterdam Centrum is een centrale locatie met revalidatiecentra. Het ligt dicht bij medische diensten, zelfhulpgroepen en andere belangrijke voorzieningen, wat het een goede keuze maakt voor patiënten die privacy wensen maar toegang nodig hebben tot stedelijke faciliteiten.</p>
+<!-- ============ BESTE LOCATIES (carousel) ============ -->
+<section class="locations-section" id="locaties-kosten" aria-labelledby="locations-heading">
+  <div class="locations-inner">
+    <div class="locations-toprow">
+      <div class="locations-head">
+        <span class="tag">Locaties</span>
+        <h2 id="locations-heading" class="section-heading">Waar bevinden zich de beste revalidatiecentra in Amsterdam?</h2>
+        <div class="prose"><p>De beste revalidatiecentra in Amsterdam zijn hieronder vermeld.</p></div>
       </div>
-      <div class="info-card">
-        <h3>Vondelparkgebied</h3>
-        <p>Het Vondelparkgebied is een rustige omgeving met groene ruimtes die patiënten helpen ontspannen en zich beter voelen. De revalidatiecentra hier bieden een vredige locatie.</p>
-      </div>
-      <div class="info-card">
-        <h3>Amsterdam-Noord</h3>
-        <p>Amsterdam-Noord is een kalme woonwijk met revalidatiecentra die een rustige herstelomgeving bieden. Het is minder druk dan andere delen van de stad, wat het geschikt maakt voor patiënten die een rustiger tempo wensen en toch dicht bij het openbaar vervoer willen blijven.</p>
-      </div>
-      <div class="info-card">
-        <h3>Amsterdam-Oost</h3>
-        <p>Amsterdam-Oost heeft rustige buurten en revalidatiecentra. Het gebied is verbonden met culturele locaties, cafés en activiteiten.</p>
-      </div>
-      <div class="info-card">
-        <h3>Amsterdam-West</h3>
-        <p>Amsterdam-West is een levendige wijk met revalidatiecentra die therapie aanbieden en de mogelijkheid om deel te nemen aan de lokale gemeenschap. Het is een goede plek voor patiënten die willen herstellen in een ondersteunende omgeving en willen genieten van de lokale cultuur.</p>
+      <div class="nav-buttons">
+        <button id="locationsPrev" class="nav-btn" aria-label="Vorige locatie">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button id="locationsNext" class="nav-btn" aria-label="Volgende locatie">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
     </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="locationsTrack">
+
+        <!-- Amsterdam Centrum -->
+        <article class="rehab-card">
+          <div class="card-image-box">
+            <div class="main-image-container">
+              <img src="https://images.unsplash.com/photo-1459679749680-18eb1eb37418?auto=format&fit=crop&w=800&q=75" alt="Amsterdam Centrum" class="card-main-img">
+              <span class="tier-pill elite-tier">[Placeholder]</span>
+            </div>
+            <div class="thumbnail-bar">
+              <button class="thumb-btn active" aria-label="Bekijk foto 1"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 2"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 3"><img src="images/placeholder.svg" alt=""></button>
+            </div>
+          </div>
+          <div class="rehab-main-info">
+            <div class="card-title-header">
+              <div class="logo-badge logo-badge-placeholder">LOGO</div>
+              <h3 class="card-title">Amsterdam Centrum</h3>
+            </div>
+            <p class="card-tagline">[Placeholder tagline]</p>
+            <div class="rating-row">
+              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
+                <span class="star-rating-bg">★★★★★</span>
+                <span class="star-rating-fg">★★★★★</span>
+              </span>
+              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
+            </div>
+            <p class="card-desc">Amsterdam Centrum is een centrale locatie met revalidatiecentra. Het ligt dicht bij medische diensten, zelfhulpgroepen en andere belangrijke voorzieningen, wat het een goede keuze maakt voor patiënten die privacy wensen maar toegang nodig hebben tot stedelijke faciliteiten.</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">SPECIALISMEN</span>
+            <div class="tags-container">
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+            </div>
+          </div>
+          <div class="card-section">
+            <span class="section-label">VOORDELEN</span>
+            <ul class="advantages-list">
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+            </ul>
+          </div>
+          <div class="edge-notes-box">
+            <div class="notes-header">
+              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+              <span>[Placeholder label]</span>
+            </div>
+            <p class="notes-text">[Placeholder teamnotitie]</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">CLIËNTBEOORDELINGEN</span>
+            <div class="client-review-box">
+              <div class="stars">★★★★★</div>
+              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
+              <span class="review-author">— [Placeholder naam]</span>
+            </div>
+          </div>
+          <a href="#aanmelden" class="btn-visit" data-open-modal="leadModal">
+            [Placeholder CTA-tekst]
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+        <!-- Vondelparkgebied -->
+        <article class="rehab-card">
+          <div class="card-image-box">
+            <div class="main-image-container">
+              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=75" alt="Vondelparkgebied" class="card-main-img">
+              <span class="tier-pill partner-tier">[Placeholder]</span>
+            </div>
+            <div class="thumbnail-bar">
+              <button class="thumb-btn active" aria-label="Bekijk foto 1"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 2"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 3"><img src="images/placeholder.svg" alt=""></button>
+            </div>
+          </div>
+          <div class="rehab-main-info">
+            <div class="card-title-header">
+              <div class="logo-badge logo-badge-placeholder">LOGO</div>
+              <h3 class="card-title">Vondelparkgebied</h3>
+            </div>
+            <p class="card-tagline">[Placeholder tagline]</p>
+            <div class="rating-row">
+              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
+                <span class="star-rating-bg">★★★★★</span>
+                <span class="star-rating-fg">★★★★★</span>
+              </span>
+              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
+            </div>
+            <p class="card-desc">Het Vondelparkgebied is een rustige omgeving met groene ruimtes die patiënten helpen ontspannen en zich beter voelen. De revalidatiecentra hier bieden een vredige locatie.</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">SPECIALISMEN</span>
+            <div class="tags-container">
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+            </div>
+          </div>
+          <div class="card-section">
+            <span class="section-label">VOORDELEN</span>
+            <ul class="advantages-list">
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+            </ul>
+          </div>
+          <div class="edge-notes-box">
+            <div class="notes-header">
+              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+              <span>[Placeholder label]</span>
+            </div>
+            <p class="notes-text">[Placeholder teamnotitie]</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">CLIËNTBEOORDELINGEN</span>
+            <div class="client-review-box">
+              <div class="stars">★★★★★</div>
+              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
+              <span class="review-author">— [Placeholder naam]</span>
+            </div>
+          </div>
+          <a href="#aanmelden" class="btn-visit" data-open-modal="leadModal">
+            [Placeholder CTA-tekst]
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+        <!-- Amsterdam-Noord -->
+        <article class="rehab-card">
+          <div class="card-image-box">
+            <div class="main-image-container">
+              <img src="https://images.unsplash.com/photo-1576924542622-772281b13aa8?auto=format&fit=crop&w=800&q=75" alt="Amsterdam-Noord" class="card-main-img">
+              <span class="tier-pill elite-tier">[Placeholder]</span>
+            </div>
+            <div class="thumbnail-bar">
+              <button class="thumb-btn active" aria-label="Bekijk foto 1"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 2"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 3"><img src="images/placeholder.svg" alt=""></button>
+            </div>
+          </div>
+          <div class="rehab-main-info">
+            <div class="card-title-header">
+              <div class="logo-badge logo-badge-placeholder">LOGO</div>
+              <h3 class="card-title">Amsterdam-Noord</h3>
+            </div>
+            <p class="card-tagline">[Placeholder tagline]</p>
+            <div class="rating-row">
+              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
+                <span class="star-rating-bg">★★★★★</span>
+                <span class="star-rating-fg">★★★★★</span>
+              </span>
+              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
+            </div>
+            <p class="card-desc">Amsterdam-Noord is een kalme woonwijk met revalidatiecentra die een rustige herstelomgeving bieden. Het is minder druk dan andere delen van de stad, wat het geschikt maakt voor patiënten die een rustiger tempo wensen en toch dicht bij het openbaar vervoer willen blijven.</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">SPECIALISMEN</span>
+            <div class="tags-container">
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+            </div>
+          </div>
+          <div class="card-section">
+            <span class="section-label">VOORDELEN</span>
+            <ul class="advantages-list">
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+            </ul>
+          </div>
+          <div class="edge-notes-box">
+            <div class="notes-header">
+              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+              <span>[Placeholder label]</span>
+            </div>
+            <p class="notes-text">[Placeholder teamnotitie]</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">CLIËNTBEOORDELINGEN</span>
+            <div class="client-review-box">
+              <div class="stars">★★★★★</div>
+              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
+              <span class="review-author">— [Placeholder naam]</span>
+            </div>
+          </div>
+          <a href="#aanmelden" class="btn-visit" data-open-modal="leadModal">
+            [Placeholder CTA-tekst]
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+        <!-- Amsterdam-Oost -->
+        <article class="rehab-card">
+          <div class="card-image-box">
+            <div class="main-image-container">
+              <img src="https://images.unsplash.com/photo-1471623320832-752e8bbf8413?auto=format&fit=crop&w=800&q=75" alt="Amsterdam-Oost" class="card-main-img">
+              <span class="tier-pill partner-tier">[Placeholder]</span>
+            </div>
+            <div class="thumbnail-bar">
+              <button class="thumb-btn active" aria-label="Bekijk foto 1"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 2"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 3"><img src="images/placeholder.svg" alt=""></button>
+            </div>
+          </div>
+          <div class="rehab-main-info">
+            <div class="card-title-header">
+              <div class="logo-badge logo-badge-placeholder">LOGO</div>
+              <h3 class="card-title">Amsterdam-Oost</h3>
+            </div>
+            <p class="card-tagline">[Placeholder tagline]</p>
+            <div class="rating-row">
+              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
+                <span class="star-rating-bg">★★★★★</span>
+                <span class="star-rating-fg">★★★★★</span>
+              </span>
+              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
+            </div>
+            <p class="card-desc">Amsterdam-Oost heeft rustige buurten en revalidatiecentra. Het gebied is verbonden met culturele locaties, cafés en activiteiten.</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">SPECIALISMEN</span>
+            <div class="tags-container">
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+            </div>
+          </div>
+          <div class="card-section">
+            <span class="section-label">VOORDELEN</span>
+            <ul class="advantages-list">
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+            </ul>
+          </div>
+          <div class="edge-notes-box">
+            <div class="notes-header">
+              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+              <span>[Placeholder label]</span>
+            </div>
+            <p class="notes-text">[Placeholder teamnotitie]</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">CLIËNTBEOORDELINGEN</span>
+            <div class="client-review-box">
+              <div class="stars">★★★★★</div>
+              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
+              <span class="review-author">— [Placeholder naam]</span>
+            </div>
+          </div>
+          <a href="#aanmelden" class="btn-visit" data-open-modal="leadModal">
+            [Placeholder CTA-tekst]
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+        <!-- Amsterdam-West -->
+        <article class="rehab-card">
+          <div class="card-image-box">
+            <div class="main-image-container">
+              <img src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=800&q=75" alt="Amsterdam-West" class="card-main-img">
+              <span class="tier-pill elite-tier">[Placeholder]</span>
+            </div>
+            <div class="thumbnail-bar">
+              <button class="thumb-btn active" aria-label="Bekijk foto 1"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 2"><img src="images/placeholder.svg" alt=""></button>
+              <button class="thumb-btn" aria-label="Bekijk foto 3"><img src="images/placeholder.svg" alt=""></button>
+            </div>
+          </div>
+          <div class="rehab-main-info">
+            <div class="card-title-header">
+              <div class="logo-badge logo-badge-placeholder">LOGO</div>
+              <h3 class="card-title">Amsterdam-West</h3>
+            </div>
+            <p class="card-tagline">[Placeholder tagline]</p>
+            <div class="rating-row">
+              <span class="star-rating" style="--rating: 0;" role="img" aria-label="Beoordeling volgt">
+                <span class="star-rating-bg">★★★★★</span>
+                <span class="star-rating-fg">★★★★★</span>
+              </span>
+              <span class="rating-summary"><strong class="rating-number">–</strong> · [placeholder] reviews</span>
+            </div>
+            <p class="card-desc">Amsterdam-West is een levendige wijk met revalidatiecentra die therapie aanbieden en de mogelijkheid om deel te nemen aan de lokale gemeenschap. Het is een goede plek voor patiënten die willen herstellen in een ondersteunende omgeving en willen genieten van de lokale cultuur.</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">SPECIALISMEN</span>
+            <div class="tags-container">
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+              <span class="tag-pill">[Placeholder]<span class="tag-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span class="tag-tooltip">[Placeholder]</span></span></span>
+            </div>
+          </div>
+          <div class="card-section">
+            <span class="section-label">VOORDELEN</span>
+            <ul class="advantages-list">
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+              <li><svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>[Placeholder voordeel]</span></li>
+            </ul>
+          </div>
+          <div class="edge-notes-box">
+            <div class="notes-header">
+              <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+              <span>[Placeholder label]</span>
+            </div>
+            <p class="notes-text">[Placeholder teamnotitie]</p>
+          </div>
+          <div class="card-section">
+            <span class="section-label">CLIËNTBEOORDELINGEN</span>
+            <div class="client-review-box">
+              <div class="stars">★★★★★</div>
+              <blockquote class="review-quote">"[Placeholder review quote]"</blockquote>
+              <span class="review-author">— [Placeholder naam]</span>
+            </div>
+          </div>
+          <a href="#aanmelden" class="btn-visit" data-open-modal="leadModal">
+            [Placeholder CTA-tekst]
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+    <div class="pagination-dots" id="locationsDots" aria-label="Locaties paginering"></div>
   </div>
 </section>
 
@@ -835,11 +1038,22 @@
 <!-- ============ CHECKLIST: FACTOREN ============ -->
 <section class="checklist-section">
   <div class="checklist-inner">
-    <div class="checklist-head">
-      <span class="tag">Uw keuze</span>
-      <h3 class="section-heading">Welke factoren moet ik overwegen bij het kiezen van een revalidatieprogramma?</h3>
+    <div class="checklist-toprow">
+      <div class="checklist-head">
+        <span class="tag">Uw keuze</span>
+        <h3 class="section-heading">Welke factoren moet ik overwegen bij het kiezen van een revalidatieprogramma?</h3>
+      </div>
+      <div class="nav-buttons">
+        <button id="checklistPrev" class="nav-btn" aria-label="Vorige factoren">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button id="checklistNext" class="nav-btn" aria-label="Volgende factoren">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
     </div>
-    <div class="checklist-grid">
+    <div class="checklist-wrapper">
+    <div class="checklist-grid" id="checklistTrack">
       <div class="checklist-item">
         <span class="mark"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
         <div><h4>Type verslaving</h4><p>Verschillende programma's zijn gespecialiseerd in bepaalde verslavingen, zoals alcohol, drugs of gedragsproblemen. Het kiezen van een programma dat zich richt op de specifieke verslaving helpt bij het aanpakken van de hersteluitdagingen.</p></div>
@@ -881,6 +1095,8 @@
         <div><h4>Succespercentages en beoordelingen</h4><p>Succespercentages en recensies van voormalige cliënten geven inzicht in de effectiviteit van het programma. Positieve ervaringen en hoge slagingspercentages vergroten het vertrouwen in het centrum.</p></div>
       </div>
     </div>
+    </div>
+    <div class="pagination-dots" id="checklistDots" aria-label="Factoren paginering"></div>
   </div>
 </section>
 

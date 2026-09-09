@@ -145,33 +145,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- Lead form (client-side acknowledgement, no backend wired) ---------- */
-  const leadForm = document.getElementById('leadForm');
-  if (leadForm) {
-    leadForm.addEventListener('submit', (e) => {
+  /* ---------- Lead forms (client-side acknowledgement, no backend wired) ---------- */
+  ['leadForm', 'heroLeadForm'].forEach((formId) => {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = leadForm.querySelector('button[type="submit"]');
+      const btn = form.querySelector('button[type="submit"]');
       if (btn) {
         btn.textContent = 'Aanvraag verzonden';
         btn.disabled = true;
       }
     });
-  }
+  });
 
   /* ---------- Generic carousel (drag + arrows + dots) ---------- */
-  function initCarousel({ trackId, prevBtnId, nextBtnId, dotsId, ariaLabel, padToMin }) {
+  function initCarousel({ trackId, prevBtnId, nextBtnId, dotsId, ariaLabel, perView }) {
     const track = document.getElementById(trackId);
     const prevBtn = document.getElementById(prevBtnId);
     const nextBtn = document.getElementById(nextBtnId);
     const dotsContainer = document.getElementById(dotsId);
     if (!track) return;
-
-    if (padToMin) {
-      const placeholderCards = Array.from(track.children);
-      while (track.children.length < padToMin && placeholderCards.length) {
-        track.appendChild(placeholderCards[(track.children.length - placeholderCards.length) % placeholderCards.length].cloneNode(true));
-      }
-    }
 
     const cards = Array.from(track.children);
     let currentIndex = 0;
@@ -183,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTranslate = 0;
     let prevTranslate = 0;
     let animationId = 0;
+    let dragMoved = false;
     const dragThreshold = 40;
 
     track.setAttribute('tabindex', '0');
@@ -191,9 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getCardsPerView() {
       const width = window.innerWidth;
-      if (width <= 640) return 1;
-      if (width <= 1024) return 2;
-      return 3;
+      const cfg = perView || { mobile: 1, tablet: 2, desktop: 3 };
+      if (width <= 640) return cfg.mobile;
+      if (width <= 1024) return cfg.tablet;
+      return cfg.desktop;
     }
 
     function renderDots() {
@@ -213,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function getTranslateOffset(index) {
       if (cards.length === 0) return 0;
       const cardWidth = cards[0].offsetWidth;
-      const gap = parseFloat(window.getComputedStyle(track).gap) || 28;
+      const gap = parseFloat(window.getComputedStyle(track).gap) || 20;
       return index * (cardWidth + gap);
     }
 
@@ -237,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dots = Array.from(dotsContainer.children);
         dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentIndex));
       }
+      cards.forEach((card, idx) => card.classList.toggle('is-current', idx === currentIndex));
     }
 
     if (prevBtn) prevBtn.addEventListener('click', () => { if (currentIndex > 0) goToSlide(currentIndex - 1); });
@@ -257,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function dragStart(e) {
       isDragging = true;
+      dragMoved = false;
       startX = getPositionX(e);
       animationId = requestAnimationFrame(animation);
       track.classList.add('dragging');
@@ -266,6 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isDragging) return;
       const currentPosition = getPositionX(e);
       const diff = currentPosition - startX;
+      if (Math.abs(diff) > 6) dragMoved = true;
       currentTranslate = prevTranslate + diff;
     }
 
@@ -283,6 +282,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       goToSlide(currentIndex);
     }
+
+    /* Prevent a card link from navigating when the user was actually dragging the track */
+    track.addEventListener('click', (e) => {
+      if (dragMoved) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
 
     function getPositionX(e) {
       return e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
@@ -311,8 +315,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initCarousel({
-    trackId: 'carouselTrack', prevBtnId: 'prevBtn', nextBtnId: 'nextBtn', dotsId: 'paginationDots',
-    ariaLabel: 'Revalidatiecentra carousel', padToMin: 6
+    trackId: 'checklistTrack', prevBtnId: 'checklistPrev', nextBtnId: 'checklistNext', dotsId: 'checklistDots',
+    ariaLabel: 'Keuzefactoren carousel', perView: { mobile: 1, tablet: 1, desktop: 2 }
+  });
+
+  initCarousel({
+    trackId: 'locationsTrack', prevBtnId: 'locationsPrev', nextBtnId: 'locationsNext', dotsId: 'locationsDots',
+    ariaLabel: 'Locaties carousel', perView: { mobile: 1, tablet: 2, desktop: 3 }
   });
 
   /* ---------- Process stepper (Het proces) ---------- */
@@ -322,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (processTrack && processPanel) {
     const steps = Array.from(processTrack.querySelectorAll('.process-step'));
     const panelNum = document.getElementById('processPanelNum');
+    const panelEyebrow = document.getElementById('processPanelEyebrow');
     const panelTitle = document.getElementById('processPanelTitle');
     const panelDesc = document.getElementById('processPanelDesc');
 
@@ -343,7 +353,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const applyContent = () => {
-        panelNum.textContent = String(index + 1).padStart(2, '0');
+        const num = String(index + 1).padStart(2, '0');
+        panelNum.textContent = num;
+        if (panelEyebrow) panelEyebrow.textContent = `Stap ${num} van ${steps.length}`;
         panelTitle.textContent = step.dataset.title;
         panelDesc.textContent = step.dataset.desc;
       };
@@ -450,13 +462,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-
-/* ---------- Carousel card thumbnail image switcher ---------- */
-function switchCardImage(btn, newSrc) {
-  const card = btn.closest('.rehab-card');
-  if (!card) return;
-  const mainImg = card.querySelector('.card-main-img');
-  if (mainImg && newSrc) mainImg.src = newSrc;
-  card.querySelectorAll('.thumb-btn').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-}
